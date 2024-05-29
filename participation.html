@@ -1,0 +1,358 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Participation Upload Form</title>
+<style type="text/css">
+<!--
+.style1 {
+font-size: 24px;
+font-style: italic;
+font-weight: bold;
+color: #CC0000;
+}
+.style2 {font-size: 18px}
+.style7 {color: #000000}
+.style3 { color: #FF0000;
+font-weight: bold;
+}
+-->
+</style>
+<script type="text/javascript">
+function valid()
+{
+if(p.ronn.value.length<1&&p.pa.value.length<1&&p.w2.value.length<1&&p.spe.value.length<1)
+{
+window.alert("Please Enter The Details Properly" );
+return false; 
+}
+else
+   return true;
+}
+</script>
+<script type="text/javascript">
+function time()
+{
+var currentTime = new Date()
+var month = currentTime.getMonth() + 1
+var day = currentTime.getDate()
+var year = currentTime.getFullYear()
+document.write(month + "/" + day + "/" + year)
+
+var currentTime = new Date()
+var hours = currentTime.getHours()
+var minutes = currentTime.getMinutes()
+if (minutes < 10){
+minutes = "0" + minutes
+}
+document.write(hours + ":" + minutes + " ")
+if(hours > 11){
+document.write("PM")
+} else {
+document.write("AM")
+}
+}
+</script>
+<script type="text/javascript" src="formfieldlimiter.js">
+
+/***********************************************
+* Form field Limiter v2.0- ? Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit Project Page at http://www.dynamicdrive.com for full source code
+***********************************************/
+
+</script>
+
+
+
+
+</head>
+<body background="c/images.jpeg">
+<script language=JavaScript>
+<!--
+
+var message="You Are Not Authorized - MAM INFOTECH!";
+///////////////////////////////////
+function clickIE4(){
+if (event.button==2){
+alert(message);
+return false;
+}
+}
+function clickNS4(e){
+if (document.layers||document.getElementById&&!document.all){
+if (e.which==2||e.which==3){
+alert(message);
+return false;
+}
+}
+}
+if (document.layers){
+document.captureEvents(Event.MOUSEDOWN);
+document.onmousedown=clickNS4;
+}
+else if (document.all&&!document.getElementById){
+document.onmousedown=clickIE4;
+}
+document.oncontextmenu=new Function("alert(message);return false")
+// --> 
+</script>
+<script>
+//"Accept terms" form submission- By Dynamic Drive
+//For full source code and more DHTML scripts, visit http://www.dynamicdrive.com
+//This credit MUST stay intact for use
+var checkobj
+function agreesubmit(el){
+checkobj=el
+if (document.all||document.getElementById){
+for (i=0;i<checkobj.form.length;i++){  //hunt down submit button
+var tempobj=checkobj.form.elements[i]
+if(tempobj.type.toLowerCase()=="submit")
+tempobj.disabled=!checkobj.checked
+}
+}
+}
+function defaultagree(el){
+if (!document.all&&!document.getElementById){
+if (window.checkobj&&checkobj.checked)
+return true
+else{
+alert("Please read/accept terms to submit form")
+return false
+}
+}
+}
+</script>
+
+<script type='text/javascript'>
+
+function validator()
+{
+	// Make quick references to our fields
+	var regno = document.getElementById('regno');
+	var name = document.getElementById('name');
+	var sem = document.getElementById('sem');
+	var class = document.getElementById('class');
+	var title = document.getElementById('title');
+	var con = document.getElementById('con');
+	<!--if(isAlphabet(name, "Please enter only letters for your name")){-->
+		if(madeSelection(dob, "Please Choose a Area Of Interest")){
+			<!--if(isAlphabet(dep, "Please enter only letters for your Department name")){{-->
+				<!--if(isAlphabet(col, "Please enter only letters for your College name")){-->
+			if(isNumeric(mno, "Please enter a valid mobile Number")){
+				if(emailValidator(em, "Please enter a valid email address")){
+					if(madeSelection(se, "Please Choose a Sex")){
+						if(madeSelection(cr, "Please Choose a Career Profile")){
+							<!--if(isAlphabet(mt, "Please enter only letters for your Mother Toungue")){-->
+								<!--if(isAlphabet(lk, "Please enter only letters for Languages Known")){-->
+							if(lengthRestriction(pa, 15, 150,"Please Enter A Valid Present Address")){
+								if(lengthRestriction(pea, 15, 150,"Please Enter A Valid Permanent Address")){
+									if(isNumeric(pe1, "Percentage Should Only Be A Numeric")){
+										if(isNumeric(pl2, "Percentage Should Only Be A Numeric")){
+											if(isNumeric(pm3, "Percentage Should Only Be A Numeric")){
+												if(isNumeric(pa4, "Percentage Should Only Be A Numeric")){
+												
+									if(madeSelection(ex, "Please Choose an Extra Qualification")){
+						if(madeSelection(cer, "Please Choose An Extra Certificates")){
+						if(lengthRestriction(spe, 15, 150,"Please Enter Valid Specifcation Details")){	
+							return true;
+	
+						<!--}-->
+					}
+				<!--}-->
+			<!--}-->
+		}
+	}
+					}
+				}
+			<!--}-->
+		<!--}-->
+	}
+		}
+	}
+		}
+	}
+				}
+			}
+		}
+	}
+	return false;
+	
+}
+
+function notEmpty(elem, helperMsg){
+	if(elem.value.length == 0){
+		alert(helperMsg);
+		elem.focus(); // set the focus to this input
+		return false;
+	}
+	return true;
+}
+
+function isNumeric(elem, helperMsg){
+	var numericExpression = /^[0-9]+$/;
+	if(elem.value.match(numericExpression)){
+		return true;
+	}else{
+		alert(helperMsg);
+		elem.focus();
+		return false;
+	}
+}
+
+function isAlphabet(elem, helperMsg){
+	var alphaExp = /^[a-zA-Z]+$ /;
+	if(elem.value.match(alphaExp)){
+		return true;
+	}else{
+		alert(helperMsg);
+		elem.focus();
+		return false;
+	}
+}
+
+function isAlphanumeric(elem, helperMsg){
+	var alphaExp = /^[0-9a-zA-Z]+$/;
+	if(elem.value.match(alphaExp)){
+		return true;
+	}else{
+		alert(helperMsg);
+		elem.focus();
+		return false;
+	}
+}
+
+function lengthRestriction(elem, min, max){
+	var uInput = elem.value;
+	if(uInput.length >= min && uInput.length <= max){
+		return true;
+	}else{
+		alert("Please enter between " +min+ " and " +max+ " characters");
+		elem.focus();
+		return false;
+	}
+}
+
+function madeSelection(elem, helperMsg){
+	if(elem.value == "Please Select"){
+		alert(helperMsg);
+		elem.focus();
+		return false;
+	}else{
+		return true;
+	}
+}
+
+function emailValidator(elem, helperMsg){
+	var emailExp = /^[\w\-\.\+]+\@[a-zA-Z0-9\.\-]+\.[a-zA-z0-9]{2,4}$/;
+	if(elem.value.match(emailExp)){
+		return true;
+	}else{
+		alert(helperMsg);
+		elem.focus();
+		return false;
+	}
+}
+</script>
+
+<body bgcolor="#66FFCC">
+<div align="center">
+ 
+  <td width="1250"><table width="1200" border="1">
+        <tr>
+        
+          <td width="1250"><h1 align="center"><strong><font size="300" face="Arial Black, Gadget, sans-serif">High Secure Image Based Authentication System for Educational Institution</font></strong></h1></td>
+        </tr>
+      </table>
+      <p></p></td></div>
+<tr>
+  <td height="1174"><div align="center" class="style1">
+      <p>Student Participation Certificate Uploader</p>
+       
+ <!--<form onsubmit='return formValidator()' >-->
+
+
+      <form action="participationmy.php" method="post" enctype="multipart/form-data" name="p" id="form1" onsubmit="return validator();">
+<p align="center" class="style2">&nbsp;</p>
+<p align="center" class="style2">Register No
+  <input type="text" id="regno" name="regno" size="50"  required/></p>
+ <p align="center" class="style2"> Name   
+   <input type="text" id="name" name="name" size="35"  required/></p>
+
+<p align="center" class="style2">Semester
+  <select id="sem" name="sem" >
+  <option value="Please Select">Please Select</option>
+  <option value="I">I</option>
+<option value="II">II</option>
+  <option value="II">III</option>
+<option value="IV">IV</option>
+<option value="V">V</option>
+<option value="VI">VI</option>
+   
+ </select>
+
+ 
+</p>
+<p align="center" class="style2">Class 
+  <input type="text" id="class" name="class" size="40" required/> </p>
+<p align="center" class="style2">Title
+  <input type="text" id="title" name="title" size="40" required/> </p>
+  <p align="center" class="style2">
+    <label for="con">Select Content</label>
+    <input type="file" name="con" id="con" />
+  </p>
+<input name="agreecheck" type="checkbox" onClick="agreesubmit(this)">
+<b>I Assure You That, Above Furnished Details Are Correct.Incase Of False, Company Can Reject My Application.</b><br>
+<input type="submit" name="Submit" value="Submit" disabled>
+<input type="reset" name="Submit2" value="Reset" />
+<script>
+//change two names below to your form's names
+document.forms.p.agreecheck.checked=false
+</script>
+       
+            
+
+<label></label>
+      </form>
+      </div>
+        <p align="center">&nbsp; </p></td>
+</tr>
+<script type="text/javascript">
+
+//Example 1:
+
+fieldlimiter.setup({
+	thefield: document.sampleform.george, //reference to form field
+	maxlength: 10,
+	statusids: ["george-status"], //id(s) of divs to output characters limit in the form [id1, id2, etc]. If non, set to empty array [].
+	onkeypress:function(maxlength, curlength){ //onkeypress event handler
+		if (curlength<maxlength) //if limit hasn't been reached
+			this.style.border="2px solid gray" //"this" keyword returns form field
+		else
+			this.style.border="2px solid red"
+	}
+})
+
+//Example 2:
+
+fieldlimiter.setup({
+	thefield: document.p.getElementById("pea"), //reference to form field
+	maxlength: 150,
+	statusids: ["pea-status"], //id(s) of divs to output characters limit. If non, set to empty array [].
+	onkeypress:function(maxlength, curlength){ //onkeypress event handler
+		//define custom event actions here if desired
+	}
+})
+fieldlimiter.setup({
+	thefield: document.p.getElementById("pa"), //reference to form field
+	maxlength: 150,
+	statusids: ["pa-status"], //id(s) of divs to output characters limit. If non, set to empty array [].
+	onkeypress:function(maxlength, curlength){ //onkeypress event handler
+		//define custom event actions here if desired
+	}
+})
+
+          </script>
+</body>
+</html>
+

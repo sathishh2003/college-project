@@ -1,0 +1,199 @@
+    <!DOCTYPE html>
+    <head>
+        <title>CONTENT UPLOADER</title>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <script type="text/javascript">
+    function validate()
+{ 
+   if( document.StudentRegistration.textnames.value == "" )
+   {
+     alert( "Please provide your Name!" );
+     document.StudentRegistration.textnames.focus() ;
+     return false;
+   }
+   if( document.StudentRegistration.fathername.value == "" )
+   {
+     alert( "Please provide your Father Name!" );
+     document.StudentRegistration.fathername.focus() ;
+     return false;
+   }
+   
+   if( document.StudentRegistration.paddress.value == "" )
+   {
+     alert( "Please provide your Postal Address!" );
+     document.StudentRegistration.paddress.focus() ;
+     return false;
+   }
+   if( document.StudentRegistration.personaladdress.value == "" )
+   {
+     alert( "Please provide your Personal Address!" );
+     document.StudentRegistration.personaladdress.focus() ;
+     return false;
+   }
+   if ( ( StudentRegistration.sex[0].checked == false ) && ( StudentRegistration.sex[1].checked == false ) )
+   {
+   alert ( "Please choose your Gender: Male or Female" );
+   return false;
+   }   
+   if( document.StudentRegistration.City.value == "-1" )
+   {
+     alert( "Please provide your City!" );
+     document.StudentRegistration.City.focus() ;
+     return false;
+   }   
+   if( document.StudentRegistration.Course.value == "-1" )
+   {
+     alert( "Please provide your Course!" );
+    
+     return false;
+   }   
+   if( document.StudentRegistration.District.value == "-1" )
+   {
+     alert( "Please provide your Select District!" );
+    
+     return false;
+   }   
+   if( document.StudentRegistration.State.value == "-1" )
+   {
+     alert( "Please provide your Select State!" );
+     
+     return false;
+   }
+   if( document.StudentRegistration.pincode.value == "" ||
+           isNaN( document.StudentRegistration.pincode.value) ||
+           document.StudentRegistration.pincode.value.length != 6 )
+   {
+     alert( "Please provide a pincode in the format ######." );
+     document.StudentRegistration.pincode.focus() ;
+     return false;
+   }
+ var email = document.StudentRegistration.emailid.value;
+  atpos = email.indexOf("@");
+  dotpos = email.lastIndexOf(".");
+ if (email == "" || atpos < 1 || ( dotpos - atpos < 2 )) 
+ {
+     alert("Please enter correct email ID")
+     document.StudentRegistration.emailid.focus() ;
+     return false;
+ }
+  if( document.StudentRegistration.dob.value == "" )
+   {
+     alert( "Please provide your DOB!" );
+     document.StudentRegistration.dob.focus() ;
+     return false;
+   }
+  if( document.StudentRegistration.mobileno.value == "" ||
+           isNaN( document.StudentRegistration.mobileno.value) ||
+           document.StudentRegistration.mobileno.value.length != 10 )
+   {
+     alert( "Please provide a Mobile No in the format 123." );
+     document.StudentRegistration.mobileno.focus() ;
+     return false;
+   }
+   return( true );
+}
+</script>
+
+    </head>
+<body bgcolor="#66FFCC">
+
+    <script language=JavaScript>
+<!--
+
+var message="You Are Not Authorized - MAM INFOTECH!";
+///////////////////////////////////
+function clickIE4(){
+if (event.button==2){
+alert(message);
+return false;
+}
+}
+function clickNS4(e){
+if (document.layers||document.getElementById&&!document.all){
+if (e.which==2||e.which==3){
+alert(message);
+return false;
+}
+}
+}
+if (document.layers){
+document.captureEvents(Event.MOUSEDOWN);
+document.onmousedown=clickNS4;
+}
+else if (document.all&&!document.getElementById){
+document.onmousedown=clickIE4;
+}
+document.oncontextmenu=new Function("alert(message);return false")
+// --> 
+</script>
+<script>
+//"Accept terms" form submission- By Dynamic Drive
+//For full source code and more DHTML scripts, visit http://www.dynamicdrive.com
+//This credit MUST stay intact for use
+var checkobj
+function agreesubmit(el){
+checkobj=el
+if (document.all||document.getElementById){
+for (i=0;i<checkobj.form.length;i++){  //hunt down submit button
+var tempobj=checkobj.form.elements[i]
+if(tempobj.type.toLowerCase()=="submit")
+tempobj.disabled=!checkobj.checked
+}
+}
+}
+function defaultagree(el){
+if (!document.all&&!document.getElementById){
+if (window.checkobj&&checkobj.checked)
+return true
+else{
+alert("Please read/accept terms to submit form")
+return false
+}
+}
+}
+</script>
+
+    <div align="center">
+ 
+  <td width="1250"><table width="1200" border="1">
+        <tr>
+          
+          <td width="973"><h1 align="center"><strong>High Secure Image Based Authentication System for Educational Institution</strong></h1></td>
+        </tr>
+      </table>
+      <p></p></td></div>
+  <div align="center">
+    <center>
+    <table border="0" cellpadding="0" cellspacing="0" width="1100"
+bgcolor="">
+
+<tr><td align="right">
+<p align="right">&nbsp;&nbsp;</p>
+<p align="center"><marquee direction="alternate">
+<b>WELCOME TO STAFF CONTENT UPLOADER</b>
+</marquee></p></td>
+</tr>
+</table>
+</center>
+</div>
+    <form id="form1" name="p" method="post" enctype="multipart/form-data"  action="uploadapp.php" onsubmit="return validate ();">
+   
+  <p align="center">&nbsp;</p>
+  <p align="center">&nbsp;</p>
+  <p align="center">&nbsp;</p>
+  <p align="center"><strong>Please Select the Content</strong>
+    <input type="file" name="uploaded_file">
+  </p>
+<p align="center">&nbsp;</p>
+<p align="center"><input name="agreecheck" type="checkbox" onClick="agreesubmit(this)">
+<b>I Will Take Responsible for the Content Uploaded.</b></p><br>
+<p align="center"><input type="submit" name="Submit" value="Submit" disabled></p>
+<p>&nbsp;</p>
+<p align="center">&nbsp;</p>           
+            
+        </form>
+       
+    </body>
+    </html>
+
+

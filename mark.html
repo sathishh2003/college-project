@@ -1,0 +1,220 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Mark Entry</title>
+<style type="text/css">
+<!--
+.style1 {
+font-size: 24px;
+font-style: italic;
+font-weight: bold;
+color: #CC0000;
+}
+.style2 {font-size: 18px}
+.style7 {color: #000000}
+.style3 { color: #FF0000;
+font-weight: bold;
+}
+-->
+</style>
+<script type="text/javascript">
+function valid()
+{
+if(p.ronn.value.length<1&&p.pa.value.length<1&&p.w2.value.length<1&&p.spe.value.length<1)
+{
+window.alert("Please Enter The Details Properly" );
+return false; 
+}
+else
+   return true;
+}
+</script>
+<script type="text/javascript">
+function time()
+{
+var currentTime = new Date()
+var month = currentTime.getMonth() + 1
+var day = currentTime.getDate()
+var year = currentTime.getFullYear()
+document.write(month + "/" + day + "/" + year)
+
+var currentTime = new Date()
+var hours = currentTime.getHours()
+var minutes = currentTime.getMinutes()
+if (minutes < 10){
+minutes = "0" + minutes
+}
+document.write(hours + ":" + minutes + " ")
+if(hours > 11){
+document.write("PM")
+} else {
+document.write("AM")
+}
+}
+</script>
+<script type="text/javascript" src="formfieldlimiter.js">
+
+/***********************************************
+* Form field Limiter v2.0- © Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit Project Page at http://www.dynamicdrive.com for full source code
+***********************************************/
+
+</script>
+
+</head>
+<body background="cliping/images.jpeg">
+<script language=JavaScript>
+<!--
+
+var message="You Are Not Authorized - MAM INFOTECH!";
+///////////////////////////////////
+function clickIE4(){
+if (event.button==2){
+alert(message);
+return false;
+}
+}
+function clickNS4(e){
+if (document.layers||document.getElementById&&!document.all){
+if (e.which==2||e.which==3){
+alert(message);
+return false;
+}
+}
+}
+if (document.layers){
+document.captureEvents(Event.MOUSEDOWN);
+document.onmousedown=clickNS4;
+}
+else if (document.all&&!document.getElementById){
+document.onmousedown=clickIE4;
+}
+document.oncontextmenu=new Function("alert(message);return false")
+// --> 
+</script>
+	<script>
+//"Accept terms" form submission- By Dynamic Drive
+//For full source code and more DHTML scripts, visit http://www.dynamicdrive.com
+//This credit MUST stay intact for use
+var checkobj
+function agreesubmit(el){
+checkobj=el
+if (document.all||document.getElementById){
+for (i=0;i<checkobj.form.length;i++){  //hunt down submit button
+var tempobj=checkobj.form.elements[i]
+if(tempobj.type.toLowerCase()=="submit")
+tempobj.disabled=!checkobj.checked
+}
+}
+}
+function defaultagree(el){
+if (!document.all&&!document.getElementById){
+if (window.checkobj&&checkobj.checked)
+return true
+else{
+alert("Please read/accept terms to submit form")
+return false
+}
+}
+}
+</script>
+<body background="cliping/images.jpeg">
+<div align="center">
+ 
+  <td width="1250"><table width="1200" border="1">
+        <tr>
+      
+          <td width="1250"><h1 align="center">E-Assignment and  External Certificate Collector</h1></td>
+        </tr>
+      </table>
+      <p></p></td>
+  <div align="center">
+    <center>
+    </center>
+</div>
+    <tr>
+      <td height="1174"><div align="center" class="style1">
+        <p>Mark Entry Register        </p>
+        <form id="form1" name="p" method="post" action="my.php" onSubmit="onSubmit="return valid();return defaultagree(this)">
+        <p align="" class="style2">Staff Name
+          <input type="text" name="name" size="50" />
+          Class
+          <input type="text" name="ron" size="35" />
+</p>
+<p align="left" class="style2">Semester
+  <input type="text" name="mno" size="35" />
+  Course
+  <input type="text" name="em" size="60" />
+</p>
+<p align="left" class="style2">&nbsp;</p>
+
+<p align="left" class="style2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Reg No&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   &nbsp;  Student Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &nbsp; Assignment Mark&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;  External Participation Mark&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; </p>
+<p align="center" class="style2">
+  <input type="text" name="q1" size="15"   id="q1" />
+    &nbsp;&nbsp;&nbsp;<input type="text" name="p1" size="45"  id="p1"/>
+    &nbsp;&nbsp;&nbsp;<input type="text" name="r1" size="30" id="r1"/>
+    &nbsp;&nbsp;&nbsp;       
+    <input type="text" id="a1" name="a1" size="10" />
+&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;      &nbsp;&nbsp;&nbsp;</p>
+<p align="center" class="style2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+
+<p class="style2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;
+  
+  <input name="agreecheck" type="checkbox" onClick="agreesubmit(this)">
+  <b>I have entered all the marks..</b><br>
+  <input type="submit" name="Submit" value="Submit" disabled>
+  <input type="reset" name="Submit2" value="Reset" />
+  <script>
+//change two names below to your form's names
+document.forms.p.agreecheck.checked=false
+  </script>
+  
+  
+  
+  <label></label>
+</form>
+      </div>
+        <p align="center">&nbsp; </p></td>
+    </tr>
+</div>
+<script type="text/javascript">
+
+//Example 1:
+
+fieldlimiter.setup({
+	thefield: document.sampleform.george, //reference to form field
+	maxlength: 10,
+	statusids: ["george-status"], //id(s) of divs to output characters limit in the form [id1, id2, etc]. If non, set to empty array [].
+	onkeypress:function(maxlength, curlength){ //onkeypress event handler
+		if (curlength<maxlength) //if limit hasn't been reached
+			this.style.border="2px solid gray" //"this" keyword returns form field
+		else
+			this.style.border="2px solid red"
+	}
+})
+
+//Example 2:
+
+fieldlimiter.setup({
+	thefield: document.p.getElementsByName("pea"), //reference to form field
+	maxlength: 150,
+	statusids: ["pea-status"], //id(s) of divs to output characters limit. If non, set to empty array [].
+	onkeypress:function(maxlength, curlength){ //onkeypress event handler
+		//define custom event actions here if desired
+	}
+})
+fieldlimiter.setup({
+	thefield: document.p.getElementsByName("pa"), //reference to form field
+	maxlength: 150,
+	statusids: ["pa-status"], //id(s) of divs to output characters limit. If non, set to empty array [].
+	onkeypress:function(maxlength, curlength){ //onkeypress event handler
+		//define custom event actions here if desired
+	}
+})
+
+          </script>
+</body>
+</html>

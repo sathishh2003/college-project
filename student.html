@@ -1,0 +1,114 @@
+<html>
+<head>
+<title>COE Login Authenticator</title>
+
+
+
+<link rel="shortcut icon" href="images/favicon.png" type="image/png">
+
+<style type="text/css">
+<!--
+.style1 {
+	font-family: "Courier New", Courier, monospace;
+	font-weight: bold;
+	color: #CC3300;
+}
+-->
+</style>
+<script type="text/javascript">
+function valid()
+{
+	if(fm.rg.value=="STA1"&&fm.pas.value=="ngm")
+	
+	{
+		window.alert("Thanks For Logging" );
+return true;
+			
+	}
+else if(fm.rg.value=="STA2"&&fm.pas.value=="college")
+	{
+		window.alert("Thanks For Logging" );
+return true;
+			
+	}
+	else
+	   window.alert("Invalid Staff Login" );
+	 
+		return false;	
+}
+</script>
+
+
+    <script>
+      function disableClick(){
+        document.onclick=function(event){
+          if (event.button == 2) {
+            alert('Your are Restricted');
+            return false;
+          }
+        }
+      }
+    </script>
+  <script>
+      function save(){
+        
+var message="Function Disabled!";    function clickIE4()    if(event.button==2){        alert(message);        return false;    }  } function clickNS4(e){    if(document.layers||=document.getElementById&&!document.all){    if (e.which==2||e.which==3){         alert(message);        return false;     }  } } if (document.layers){    document.captureEvents(Event.MOUSEDOWN);   document.onmousedown=clickNS4;  }  else if(document.all&&!=document.getElementById){   document.onmousedown=clickIE4;   }  document.oncontextmenu=new Function("alert=(message);return false")
+
+}
+    </script>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+</head>
+
+<body bgcolor="#66FFCC">
+
+
+
+  <td width="1250"><table width="1200" border="1" align="center">
+        <tr>
+          
+          <td width="973"><h1 align="center"><strong><font size="300" face="Arial Black, Gadget, sans-serif">High Secure Image Based Authentication System for Educational Institution</font></strong></h1></td>
+        </tr>
+      </table>
+<br><br>
+
+<br><br>
+<table width="855" height="191" border="0" bgcolor="" align="center">
+  <tr></tr>
+<br><br>
+<br><br>
+<tr>
+
+    <td height="162"><div align="center" class="style1">
+      <p><font size="+3">COE Login Authenticator</font></p>
+      <form id="form1" name="fm" method="post" action="coe.html" onSubmit="return valid();">
+
+<br><br>
+<br><br>
+        <label><font size="+1">Enter COE ID</font>
+          <input type="text" name="rg" id="textfield" required/>
+          </label>
+        <p align="center">
+              <label><font size="+1">Enter Password</font>
+                     <input type="password" name="pas" id="textfield2" required/>
+              </label>
+            </p>
+                 <p>&nbsp;</p>
+                 <p>
+                   <label>
+                     <input type="submit" name="button" id="button" value="Submit" />
+                   </label>
+                 </p>
+      </form>
+      </div></td>
+  </tr>
+  <tr>
+    <td width="843" height="23">&nbsp;</td>
+  </tr>
+</table></center>
+<p>&nbsp;</p>
+
+  <p align="center">&nbsp;</p>
+ <p align="center">&nbsp;</p>
+
+</body>
+</html>
